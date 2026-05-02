@@ -1,0 +1,86 @@
+[
+  {
+    "type": "SPAWN",
+    "timestamp": "2026-05-02T18:15:08.951029+00:00",
+    "data": {
+      "command": [
+        "python3",
+        "-c",
+        "\nimport time\nprint('starting...')\ntime.sleep(12)\nprint('done')\n"
+      ],
+      "pid": 283582
+    }
+  },
+  {
+    "type": "STDOUT",
+    "line": "starting...",
+    "timestamp": "2026-05-02T18:15:08.978660+00:00"
+  },
+  {
+    "type": "HEALTH_CHECK",
+    "timestamp": "2026-05-02T18:15:14.085147+00:00",
+    "data": {
+      "pid": 283582,
+      "alive": true,
+      "status": "sleeping",
+      "cpu_percent": 0.0,
+      "ram_mb": 8.53,
+      "timestamp": "2026-05-02T18:15:14.085022+00:00"
+    }
+  },
+  {
+    "type": "SILENCE_DETECTED",
+    "timestamp": "2026-05-02T18:15:19.091623+00:00",
+    "data": {
+      "lines": [
+        "starting..."
+      ],
+      "silence_duration": 10.11,
+      "process_name": "python3",
+      "runtime_seconds": 10.14,
+      "pid": 283582,
+      "timestamp": "2026-05-02T18:15:19.091383+00:00"
+    }
+  },
+  {
+    "type": "INJECTION",
+    "timestamp": "2026-05-02T18:15:19.092369+00:00",
+    "data": {
+      "response": "Y",
+      "mode": "manual",
+      "process_name": "python3",
+      "pid": 283582,
+      "timestamp": "2026-05-02T18:15:19.092246+00:00"
+    }
+  },
+  {
+    "type": "HEALTH_CHECK",
+    "timestamp": "2026-05-02T18:15:19.199752+00:00",
+    "data": {
+      "pid": 283582,
+      "alive": true,
+      "status": "sleeping",
+      "cpu_percent": 0.0,
+      "ram_mb": 8.53,
+      "timestamp": "2026-05-02T18:15:19.199635+00:00"
+    }
+  },
+  {
+    "type": "STDOUT",
+    "line": "Y",
+    "timestamp": "2026-05-02T18:15:19.200413+00:00"
+  },
+  {
+    "type": "STDOUT",
+    "line": "done",
+    "timestamp": "2026-05-02T18:15:20.978659+00:00"
+  },
+  {
+    "type": "EXIT",
+    "timestamp": "2026-05-02T18:15:20.981950+00:00",
+    "data": {
+      "pid": 283582,
+      "process_name": "python3"
+    }
+  }
+]
