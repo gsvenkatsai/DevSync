@@ -1,0 +1,24 @@
+{
+  "name": "devsync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsvenkatsai/DevSync.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsvenkatsai/DevSync/issues"
+  },
+  "homepage": "https://github.com/gsvenkatsai/DevSync#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.67.0",
+    "ws": "^8.20.0"
+  }
+}
