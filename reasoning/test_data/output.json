@@ -1,0 +1,11 @@
+{
+  "recommendation": "Y",
+  "reason": "The prompt is asking to overwrite /runs/exp_041, which is a known failed experiment and safe to overwrite according to SOUL.md",
+  "confidence": "high",
+  "risk": "low",
+  "process_name": "train.py",
+  "prompt_text": "Overwrite? [Y/n]:",
+  "runtime_seconds": 1320,
+  "pid": 12345,
+  "timestamp": "2026-05-03T10:30:00Z"
+}
