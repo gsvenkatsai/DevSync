@@ -1,0 +1,18 @@
+{
+  "type": "INPUT_REQUIRED",
+  "prompt_text": "Overwrite? [Y/n]:",
+  "process_name": "train.py",
+  "runtime_seconds": 1320,
+  "context_lines": [
+    "Loading dataset from /data/images...",
+    "Found 15,000 training images.",
+    "Initializing model weights...",
+    "Epoch 1: loss 2.451",
+    "Epoch 2: loss 1.932",
+    "Epoch 12: loss 0.432",
+    "WARNING: Checkpoint directory already exists at /runs/exp_041.",
+    "Overwrite? [Y/n]:"
+  ],
+  "pid": 12345,
+  "timestamp": "2026-05-03T10:30:00Z"
+}
