@@ -1,18 +1,15 @@
 import os
 import json
-from openai import OpenAI
+from groq import Groq
 from dotenv import load_dotenv
 
 # 1. Load the hidden environment variables from the .env file
 load_dotenv()
 
 class ReasoningEngine:
-    def __init__(self, api_key=None, soul_path="SOUL.md"):
+    def __init__(self, api_key=None, soul_path="../SOUL.md"):
         # Initialize the client pointing to Groq's insanely fast API
-        self.client = OpenAI(
-            api_key=api_key,
-            base_url="https://api.groq.com/openai/v1"
-        )
+        self.client = Groq(api_key=api_key)
         # Use "SOUL.md" for local testing. Change to "../SOUL.md" on Day 6 Integration.
         self.soul_path = soul_path
 

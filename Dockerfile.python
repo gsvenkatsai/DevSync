@@ -1,0 +1,13 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY wrapper/ ./wrapper/
+COPY classifier/ ./classifier/
+COPY reasoning/ ./reasoning/
+COPY integrate.py .
+COPY SOUL.md .
+
+RUN pip install groq python-dotenv websocket-client psutil
+
+CMD ["python", "wrapper/wrapper.py", "python3", "/tmp/test_script.py"]

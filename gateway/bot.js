@@ -1,8 +1,13 @@
 const TelegramBot = require("node-telegram-bot-api");
 const { formatAlert } = require("./alert");
 
-const TOKEN = "8766372491:AAGcio4yp7k_dLCH22s37hvDFbwI9CDFuN8";
-const CHAT_ID = "7346994201";
+const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+
+if (!TOKEN || !CHAT_ID) {
+  console.error("[devsync] ERROR: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set");
+  process.exit(1);
+}
 
 const bot = new TelegramBot(TOKEN, { polling: true });
 

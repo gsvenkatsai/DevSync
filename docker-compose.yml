@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  gateway:
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8765:8765"
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+    networks:
+      - devsync
+
+  wrapper:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    depends_on:
+      - gateway
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GATEWAY_URL=ws://gateway:8765
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - devsync
+
+networks:
+  devsync:
+    driver: bridge
