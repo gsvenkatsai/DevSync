@@ -12,13 +12,23 @@ function formatAlert(contractC) {
   const runtime_mins = Math.floor(runtime_seconds / 60);
   const riskEmoji = risk === "low" ? "🟢" : risk === "medium" ? "🟡" : "🔴";
 
+  const isHighRisk = risk === "high" || recommendation === "MANUAL_ONLY";
+
+  const header = isHighRisk
+    ? `🚨 <b>DevSync — HIGH RISK DETECTED</b>\n`
+    : `⚠️ <b>DevSync — Input Required</b>\n`;
+
+  const suggestionLine = isHighRisk
+    ? `🚫 <b>Auto-approve BLOCKED.</b> Manual response required.\n`
+    : `🤖 <b>Suggests:</b> ${recommendation}\n`;
+
   return (
-    `⚠️ <b>DevSync — Input Required</b>\n` +
+    header +
     `━━━━━━━━━━━━━━━\n` +
     `🔧 <b>Process:</b> ${process_name}\n` +
     `⏱️ <b>Running:</b> ${runtime_mins} mins\n` +
     `📍 <b>Prompt:</b> <code>${prompt_text}</code>\n\n` +
-    `🤖 <b>Claude suggests:</b> ${recommendation}\n` +
+    suggestionLine +
     `💡 <b>Reason:</b> ${reason}\n` +
     `📊 <b>Confidence:</b> ${confidence} | ${riskEmoji} Risk: ${risk}`
   );
