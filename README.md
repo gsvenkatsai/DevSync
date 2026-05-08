@@ -267,17 +267,3 @@ Overwrite  already exists  Press any key  Are you sure  (y/n)
 Layer 2 LLM fallback fires if the process goes silent for 10+ seconds with no regex match — asks Groq: *"Is this output waiting for user input?"*
 
 ---
-
-## Roadmap
-
-- [ ] WhatsApp notification channel
-- [ ] Web dashboard for session history
-- [ ] Windows native support via `pywinpty`
-- [ ] Auto-learn safe defaults from past session patterns
-- [ ] Multi-process monitoring in a single session
-
----
-
-## License
-
-MIT
